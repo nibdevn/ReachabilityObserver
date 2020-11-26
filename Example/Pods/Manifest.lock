@@ -1,0 +1,23 @@
+PODS:
+  - ReachabilityObserver (1.0.0):
+    - ReachabilitySwift
+  - ReachabilitySwift (5.0.0)
+
+DEPENDENCIES:
+  - ReachabilityObserver (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  ReachabilityObserver:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ReachabilityObserver: a1b67199352e9be89297ed4af5c578386ae3bfab
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+
+PODFILE CHECKSUM: d37fb3ea16ba9e3d1b399b2883b6d7b37116c094
+
+COCOAPODS: 1.10.0

@@ -2,10 +2,5 @@ use_frameworks!
 
 target 'ReachabilityObserver_Example' do
   pod 'ReachabilityObserver', :path => '../'
-
-  target 'ReachabilityObserver_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  
 end

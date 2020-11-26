@@ -7,18 +7,35 @@
 //
 
 import UIKit
+import ReachabilityObserver
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    var disposeBag: ReachabilityDisposeBag?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func onTappedSubscribeButton(_ sender: UIButton) {
+        disposeBag?.dispose()
+        disposeBag = ReachabilityObserver.subscribe { (status) in
+            switch status {
+            case .none:
+                self.statusLabel.text = "None"
+            case .cellular:
+                self.statusLabel.text = "Cellular"
+            case .wifi:
+                self.statusLabel.text = "Wifi"
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onTappedDisposeButton(_ sender: UIButton) {
+        disposeBag?.dispose()
+        statusLabel.text = "Disposed"
     }
-
 }
 

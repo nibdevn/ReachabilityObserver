@@ -1,0 +1,6 @@
+framework module ReachabilityObserver {
+  umbrella header "ReachabilityObserver-umbrella.h"
+
+  export *
+  module * { export * }
+}

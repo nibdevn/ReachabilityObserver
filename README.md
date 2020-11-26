@@ -1,15 +1,44 @@
 # ReachabilityObserver
 
-[![CI Status](https://img.shields.io/travis/nibdevn@gmail.com/ReachabilityObserver.svg?style=flat)](https://travis-ci.org/nibdevn@gmail.com/ReachabilityObserver)
-[![Version](https://img.shields.io/cocoapods/v/ReachabilityObserver.svg?style=flat)](https://cocoapods.org/pods/ReachabilityObserver)
-[![License](https://img.shields.io/cocoapods/l/ReachabilityObserver.svg?style=flat)](https://cocoapods.org/pods/ReachabilityObserver)
-[![Platform](https://img.shields.io/cocoapods/p/ReachabilityObserver.svg?style=flat)](https://cocoapods.org/pods/ReachabilityObserver)
+![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/nibdevn/ReachabilityObserver/blob/master/LICENSE)
 
-## Example
+## Summary
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- [Requirements](#requirements)
+- [Dependency](#dependency)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Example](#example)
 
 ## Requirements
+
+- Swift 4.2
+- iOS 10.0+
+
+## Dependency
+ - [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift)
+ 
+## Usage
+
+```swift
+
+var disposeBag: ReachabilityDisposeBag?
+
+disposeBag = ReachabilityObserver.subscribe { status in
+    switch status {    
+    case .none:
+        print("ReachabilityStatus is None")
+    case .cellular:
+        print("ReachabilityStatus is Cellular")
+    case .wifi:
+        print("ReachabilityStatus is Wifi")
+    }
+}
+
+disposeBag?.dispose()
+
+```
 
 ## Installation
 
@@ -17,13 +46,18 @@ ReachabilityObserver is available through [CocoaPods](https://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ReachabilityObserver'
+
+pod 'ReachabilityObserver', :tag => '1.0.0', :git => 'https://github.com/nibdevn/ReachabilityObserver'
+
 ```
 
-## Author
+## Example
 
-nibdevn@gmail.com, nibdevn@gmail.com
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## License
 
-ReachabilityObserver is available under the MIT license. See the LICENSE file for more info.
+These works are available under the MIT license. See the [LICENSE][license] file
+for more info.
+
+[license]: LICENSE
