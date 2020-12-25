@@ -73,6 +73,7 @@ final public class ReachabilityObserver {
     @discardableResult
     public static func subscribe(_ handler: @escaping (ReachabilityStatus) -> Void) -> ReachabilityDisposeBag? {
         guard shared.isActive else { return nil }
+        handler(shared.m_status)
         let disposeBag = ReachabilityDisposeBag(handler)
         shared.disposeBagSet.insert(disposeBag)
         shared.notificationCenter.addObserver(disposeBag, selector: #selector(disposeBag.event(_:)), name: shared.notificationName, object: nil)

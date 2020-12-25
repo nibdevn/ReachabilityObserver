@@ -37,7 +37,6 @@ disposeBag = ReachabilityObserver.subscribe { status in
 }
 
 disposeBag?.dispose()
-
 ```
 
 ## Installation
@@ -47,7 +46,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'ReachabilityObserver', :tag => '1.0.0', :git => 'https://github.com/nibdevn/ReachabilityObserver'
+pod 'ReachabilityObserver', :tag => '1.1.0', :git => 'https://github.com/nibdevn/ReachabilityObserver'
 
 ```
 

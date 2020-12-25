@@ -38,4 +38,3 @@ class ViewController: UIViewController {
         statusLabel.text = "Disposed"
     }
 }
-

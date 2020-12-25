@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReachabilityObserver'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'This is ReachabilityObserver'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/nibdevn/ReachabilityObserver'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Nahanwoong' => 'nibdevn@gmail.com' }
+  s.author           = { 'hanwoong Na' => 'nibdevn@gmail.com' }
   s.source           = { :git => 'https://github.com/nibdevn/ReachabilityObserver.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
